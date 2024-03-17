@@ -1,3 +1,5 @@
+package Lineales.Estaticas.src;
+
 public class Pila {
     private Object[] arreglo;
     private int tope;
@@ -74,7 +76,7 @@ public class Pila {
         String cadena = "Es vacia!";
         if (!esVacia()) {
             cadena = "Tope: " + this.tope;
-            for (int i = this.tope; i > -1; i--) {
+            for (int i = this.arreglo.length; i > -1; i--) {
                 cadena += "\nPosicion: " + i + " Elemento: " + this.arreglo[i];
             }
         }
