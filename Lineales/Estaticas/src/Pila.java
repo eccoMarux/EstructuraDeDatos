@@ -76,7 +76,7 @@ public class Pila {
         String cadena = "Es vacia!";
         if (!esVacia()) {
             cadena = "Tope: " + this.tope;
-            for (int i = this.arreglo.length; i > -1; i--) {
+            for (int i = this.arreglo.length-1; i > -1; i--) {
                 cadena += "\nPosicion: " + i + " Elemento: " + this.arreglo[i];
             }
         }
