@@ -1,4 +1,20 @@
 import Lineales.Estaticas.src.Pila;
+
+/*
+ * 1. Crear un paquete lineales.estaticas e implementar la clase Pila,
+ * incluyendo todas las operaciones del TDA
+ * Pila.
+ * 2. Crear un paquete tests.lineales e implementar la clase TestPila que
+ * permita probar todas las operaciones
+ * de la clase Pila anterior con números enteros.
+ * 3. En la clase TestPila escriba un método que, dada una pila llena con
+ * dígitos (0..9), verifique si la secuencia
+ * forma un número capicúa o no. Nota: Utilizar una pila auxiliar para facilitar
+ * la operación.
+ * 4. Extienda la clase TestPila para comprobar que la misma clase Pila también
+ * funciona con elementos de
+ * tipo String.
+ */
 public class TestPila {
     public static void main(String[] args) {
         Pila pilaPrueba = new Pila();
