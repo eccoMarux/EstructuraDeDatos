@@ -38,9 +38,20 @@ public class Pila {
     }
 
     public Pila clone() {
-        Pila pilaClon = new Pila();
-        // Ayuda
-        return pilaClon;
+        Pila copia = new Pila();
+        Nodo auxCopia;
+        Nodo auxOri = this.tope;
+        if (!esVacia()) {
+            copia.tope = new Nodo(auxOri.getElem(), null);
+            auxOri = auxOri.getEnlace();
+            auxCopia = copia.tope;
+            while (auxOri != null) {
+                auxCopia.setEnlace(new Nodo(auxOri.getElem(), null));
+                auxCopia = auxCopia.getEnlace();
+                auxOri = auxOri.getEnlace();
+            }
+        }
+        return copia;
     }
 
     public String toString() {
