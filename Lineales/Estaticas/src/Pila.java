@@ -44,7 +44,11 @@ public class Pila {
     }
 
     public Object obtenerTope() {
-        return this.tope;
+        Object elementoTope = null;
+        if(this.tope != -1){
+            elementoTope = this.arreglo[this.tope];
+        }
+        return elementoTope;
     }
 
     public boolean esVacia() {
@@ -52,9 +56,8 @@ public class Pila {
     }
 
     public void vaciar() {
-        int i;
         if (!this.esVacia()) {
-            for (i = 0; i <= this.tope; i++) {
+            for (int i = 0; i <= this.tope; i++) {
                 this.arreglo[i] = null;
             }
             this.tope = -1;

@@ -12,9 +12,9 @@ public class Cola {
         this.fin = 0;
     }
 
-public boolean poner(Object nuevoElemento) {
+    public boolean poner(Object nuevoElemento) {
         boolean exito = false;
-        if (((this.fin + 1) % this.TAMANIO) != this.frente) { //Verifica que NO este llena
+        if (((this.fin + 1) % this.TAMANIO) != this.frente) { // Verifica que NO este llena
             this.arreglo[this.fin] = nuevoElemento;
             this.fin = (this.fin + 1) % this.TAMANIO;
             exito = true;
@@ -34,9 +34,9 @@ public boolean poner(Object nuevoElemento) {
 
     public Object obtenerFrente() {
         Object elemento;
-        if(esVacia()){
+        if (esVacia()) {
             elemento = null;
-        }else{
+        } else {
             elemento = this.arreglo[this.frente];
         }
         return elemento;
