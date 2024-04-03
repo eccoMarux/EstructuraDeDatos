@@ -23,13 +23,12 @@ public class Cola {
     }
 
     public boolean sacar() {
-        boolean elementoSacado = !(esVacia()); // si es vacia(true), exito es falso y retorna falso.
-        if (elementoSacado) {
+        boolean puedoSacar = !(esVacia()); // si es vacia(true), exito es falso y retorna falso.
+        if (puedoSacar) {
             this.arreglo[this.frente] = null;
             this.frente = (this.frente + 1) % this.TAMANIO;
-            elementoSacado = true;
         }
-        return elementoSacado;
+        return puedoSacar;
     }
 
     public Object obtenerFrente() {
@@ -46,15 +45,17 @@ public class Cola {
         return (this.frente == this.fin);
     }
 
-    public boolean vaciar() {
+    public void vaciar() {
         if (!esVacia()) { 
-            while (this.frente < this.fin) {
+            while (this.frente != this.fin) {
                 this.arreglo[this.frente] = null; 
                 this.frente = (this.frente + 1) % TAMANIO;
             }
+            this.frente = 0;
+            this.fin = 0;
         }
-        return true;
     }
+    
 
     public Cola clone() {
         Cola clon = new Cola();
