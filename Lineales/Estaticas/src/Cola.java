@@ -47,7 +47,12 @@ public class Cola {
     }
 
     public boolean vaciar() {
-        // logica
+        if (!esVacia()) { 
+            while (this.frente < this.fin) {
+                this.arreglo[this.frente] = null; 
+                this.frente = (this.frente + 1) % TAMANIO;
+            }
+        }
         return true;
     }
 
