@@ -1,5 +1,5 @@
-import Lineales.Estaticas.src.Pila;
-
+//import Lineales.Estaticas.src.Pila;
+import Lineales.Dinamicas.src.Pila;
 /*
  * 1. Crear un paquete lineales.estaticas e implementar la clase Pila,
  * incluyendo todas las operaciones del TDA
