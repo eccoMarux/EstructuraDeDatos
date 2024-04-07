@@ -1,8 +1,13 @@
+//import Lineales.Estaticas.src.Pila;
+import Lineales.Dinamicas.src.Pila;
 
-import Lineales.Estaticas.src.Pila;
-//import Lineales.Dinamicas.src.Pila;
-
-public class TestPilaCat {
+/**
+ *
+ * @author Catedra EDAT - FAI - UNCOMA 
+ * Ultima modificación: 22/04/2021
+ *
+ */
+public class TestingPila {
 
     static String sOk = "OK!", sErr = "ERROR";
 
@@ -44,8 +49,7 @@ public class TestPilaCat {
         }
         System.out.print("espera \t[1,2,3,4,5,6,7,8,9,10]");
         System.out.println("\t\t\t\t\t--> " + p1.toString());
-        System.out.println("Recupera tope espera 10 recupera: " + (int) p1.obtenerTope() + "\t\t\t"
-                + (((int) p1.obtenerTope() == 10) ? sOk : sErr));
+        System.out.println("Recupera tope espera 10 recupera: " + (int) p1.obtenerTope() + "\t\t\t" + (((int) p1.obtenerTope() == 10) ? sOk : sErr));
 
         System.out.println("Desapila: \t\t\t\t\t\t" + ((p1.desapilar()) ? sOk : sErr));
         System.out.println("espera \t1,2,3,4,5,6,7,8,9 recupera \t\t\t\t--> " + p1.toString());
@@ -53,8 +57,7 @@ public class TestPilaCat {
         System.out.println("espera \t1,2,3,4,5,6,7,8 recupera \t\t\t\t--> " + p1.toString());
         System.out.println("Apila 6: \t\t\t\t\t\t" + ((p1.apilar(6)) ? sOk : sErr));
         System.out.println("espera \t1,2,3,4,5,6,7,8,6 recupera \t\t\t\t--> " + p1.toString());
-        System.out.println("Recupera tope, espera 6 recupera " + (int) p1.obtenerTope() + "\t\t\t"
-                + (((int) p1.obtenerTope() == 6) ? sOk : sErr));
+        System.out.println("Recupera tope, espera 6 recupera " + (int) p1.obtenerTope() + "\t\t\t" + (((int) p1.obtenerTope() == 6) ? sOk : sErr));
 
         Pila p2 = p1.clone();
         System.out.println("Copia espera 1,2,3,4,5,6,7,8,6: \t\t\t\t--> " + p2.toString());

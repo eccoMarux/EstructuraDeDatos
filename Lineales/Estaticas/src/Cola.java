@@ -67,11 +67,16 @@ public class Cola {
 
     public String toString() {
         String cadena = "Cola: \n";
-        int i = this.frente;
-        while (i != this.fin) {
-            cadena += "  " + this.arreglo[i] + "\n";
-            i = (i + 1) % this.TAMANIO;
+        if(esVacia()){
+            cadena += "¡Es Vacia!";
+        }else{
+            int i = this.frente;
+            while (i != this.fin) {
+                cadena += "  " + this.arreglo[i] + "\n";
+                i = (i + 1) % this.TAMANIO;
+            }
         }
+        
         return cadena;
     }
 }

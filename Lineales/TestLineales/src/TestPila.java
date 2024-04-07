@@ -1,5 +1,5 @@
-//import Lineales.Estaticas.src.Pila;
-import Lineales.Dinamicas.src.Pila;
+import Lineales.Estaticas.src.Pila;
+//import Lineales.Dinamicas.src.Pila;
 /*
  * 1. Crear un paquete lineales.estaticas e implementar la clase Pila,
  * incluyendo todas las operaciones del TDA
@@ -19,10 +19,11 @@ public class TestPila {
     public static void main(String[] args) {
         Pila pilaPrueba = new Pila();
         Pila pilaClon;
-        int cargado = 12;
+        int cargado = 10;
 
         /*** TEST PILA CON NUMEROS ENTEROS ***/
 
+        System.out.println(">> ¡Pila Vacia!");
         /* Test TOSTRING con Pila Vacia */
         System.out.println("Test ToString (no debe listar): " + pilaPrueba.toString());
 
@@ -33,10 +34,10 @@ public class TestPila {
         System.out.println("Test Desapilar (false): " + pilaPrueba.desapilar());
 
         /* Test OBTENERTOPE con Pila Vacia */
-        System.out.println("Test Obtener Tope (-1):" + pilaPrueba.obtenerTope());
+        System.out.println("Test Obtener Tope (null):" + pilaPrueba.obtenerTope());
 
         /* Test CLONE con Pila Vacia */
-        System.out.println("Test Clon Pila Vacia:");
+        System.out.println(">> ¡Test Clon Pila Vacia!");
         pilaClon = pilaPrueba.clone();
         System.out.println("Pila Original: " + pilaPrueba.toString());
         System.out.println("Pila Clon: " + pilaClon.toString());
@@ -44,27 +45,28 @@ public class TestPila {
 
         /* Test APILAR */
         for (int i = 0; i < cargado; i++) {
-            pilaPrueba.apilar((i + 2));
+            pilaPrueba.apilar((i));
         }
 
         /* Test TOSTRING con Pila Cargada */
-        System.out.println("Test Apilar (respeta posicion+2) y ToString: \n" + pilaPrueba.toString());
+        System.out.println(">> ¡Pila Cargada!");
+        System.out.println("Test Apilar (10 elementos) y ToString: \n" + pilaPrueba.toString());
 
         /* Test ESVACIA con Pila Cargada */
         System.out.println("Test EsVacia (false): " + pilaPrueba.esVacia());
 
         /* Test OBTENERTOPE con Pila Cargada */
-        System.out.println("Test Obtener Tope (" + (cargado - 1) + "):" + pilaPrueba.obtenerTope());
+        System.out.println("Test Obtener Tope (9): " + pilaPrueba.obtenerTope());
 
         /* Test DESAPILAR con Pila Cargada */
         System.out.println("Test Desapilar (true): " + pilaPrueba.desapilar());
         System.out.println("Pila Actual despues de Desapilar: \n" + pilaPrueba.toString());
 
         /* Test OBTENERTOPE despues de Desapilar */
-        System.out.println("Test Obtener Tope (" + (cargado - 2) + "):" + pilaPrueba.obtenerTope());
+        System.out.println("Test Obtener Tope (8):" + pilaPrueba.obtenerTope());
 
         /* Test CLONE con Pila Cargada */
-        System.out.println("Test Clon Pila Cargada:");
+        System.out.println(">> ¡Test Clon Pila Cargada!");
         pilaClon = pilaPrueba.clone();
         System.out.println("Pila Original: \n" + pilaPrueba.toString());
         System.out.println("Pila Clon: \n" + pilaClon.toString());
@@ -76,6 +78,7 @@ public class TestPila {
         pilaClon.vaciar();
 
         /*** TEST PILA CON STRINGS ***/
+        System.out.println(">> ¡Test Clon Pila Cargada con Strings!");
 
         /* Test APILAR con Pila Cargada */
         pilaPrueba.apilar("Maru");
@@ -88,15 +91,14 @@ public class TestPila {
         System.out.println("Test TOSTRING (arreglos con strings): \n" + pilaPrueba.toString());
 
         /* Test OBTENERTOPE con Pila Cargada */
-        System.out.println("Test Obtener Tope (4):" + pilaPrueba.obtenerTope());
+        System.out.println("Test Obtener Tope (Edat24):" + pilaPrueba.obtenerTope());
 
         /* Test DESAPILAR con Pila Cargada */
         System.out.println("Test Desapilar (true): " + pilaPrueba.desapilar());
         System.out.println("Pila Actual despues de Desapilar: \n" + pilaPrueba.toString());
-        System.out.println("Obtener Tope (3):" + pilaPrueba.obtenerTope());
+        System.out.println("Obtener Tope (Mint):" + pilaPrueba.obtenerTope());
 
         /* Test CLONE con Pila Cargada */
-        System.out.println("Test Clon Pila Cargada:");
         pilaClon = pilaPrueba.clone();
         System.out.println("Pila Original: \n" + pilaPrueba.toString());
         System.out.println("Pila Clon: \n" + pilaClon.toString());

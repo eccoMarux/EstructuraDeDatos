@@ -16,8 +16,8 @@ public class Pila {
     }
 
     public boolean desapilar() {
-        boolean exitoDesapilar = (this.tope == null);
-        if (!exitoDesapilar) {
+        boolean exitoDesapilar = false;
+        if (this.tope != null) {
             Nodo nodoAnterior = this.tope.getEnlace();
             this.tope = nodoAnterior;
             exitoDesapilar = true;
@@ -26,7 +26,11 @@ public class Pila {
     }
 
     public Object obtenerTope() {
-        return this.tope.getElem();
+        Object elemento = null;
+        if(!esVacia()){
+            elemento = this.tope.getElem();
+        }
+        return elemento;
     }
 
     public boolean esVacia() {
@@ -60,6 +64,7 @@ public class Pila {
             cadena = "Pila Vacia";
         } else {
             Nodo aux = this.tope;
+            cadena += "tope: " + this.tope.getElem() + "\n"; 
             cadena += "[ ";
             while (aux != null) {
                 cadena += aux.getElem().toString();
