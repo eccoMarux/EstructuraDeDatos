@@ -1,4 +1,4 @@
-package Lineales.Dinamicas.src;
+package Lineales.Dinamicas;
 
 public class Pila {
     private Nodo tope;

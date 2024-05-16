@@ -1,5 +1,5 @@
-//import Lineales.Dinamicas.src.Cola;
-import Lineales.Estaticas.src.Cola;
+package Lineales.TestLineales;
+
 public class TestCola {
     public static void main(String[] args) {
         Cola colaOriginal = new Cola();

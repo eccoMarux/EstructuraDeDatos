@@ -1,4 +1,4 @@
-package Lineales.Dinamicas.src;
+package Lineales.Dinamicas;
 
 public class Cola {
     private Nodo frente;
