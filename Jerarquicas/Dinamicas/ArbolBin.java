@@ -1,4 +1,4 @@
-package Lineales.Estaticas.Jerarquicas;
+package Jerarquicas.Dinamicas;
 
 public class ArbolBin {
 
@@ -31,6 +31,7 @@ public class ArbolBin {
                 exito = false;
             }
         }
+        return exito;
     }
 
     private NodoArbol obtenerNodo(NodoArbol n, Object buscado){

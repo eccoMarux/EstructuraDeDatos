@@ -1,3 +1,7 @@
+package Jerarquicas.Dinamicas;
+import Lineales.Dinamicas.Lista;
+import Lineales.Dinamicas.Cola;
+
 public class ArbolGen {
     private NodoGen raiz;
 

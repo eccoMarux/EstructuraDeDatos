@@ -1,3 +1,4 @@
+package Jerarquicas.Dinamicas;
 public class NodoGen {
     private NodoGen hijoIzquierdo;
     private NodoGen hermanoDerecho;

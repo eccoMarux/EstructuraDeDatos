@@ -1,4 +1,4 @@
-package Lineales.Estaticas.Jerarquicas;
+package Jerarquicas.Dinamicas;
 
 public class NodoArbol {
 
