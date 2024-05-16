@@ -1,4 +1,7 @@
-import Lineales.Estaticas.src.Pila;
+package Lineales.TestLineales;
+//import Lineales.Estaticas.Pila;
+import Lineales.Dinamicas.Pila;
+
 //import Lineales.Dinamicas.src.Pila;
 /*
  * 1. Crear un paquete lineales.estaticas e implementar la clase Pila,

@@ -1,5 +1,6 @@
-//import Lineales.Estaticas.src.Pila;
-import Lineales.Dinamicas.src.Pila;
+package Lineales.TestLineales;
+//import Lineales.Estaticas.Pila;
+import Lineales.Dinamicas.Pila;
 
 /**
  *
@@ -7,6 +8,7 @@ import Lineales.Dinamicas.src.Pila;
  * Ultima modificación: 22/04/2021
  *
  */
+
 public class TestingPila {
 
     static String sOk = "OK!", sErr = "ERROR";

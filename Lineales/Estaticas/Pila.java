@@ -1,4 +1,4 @@
-package Lineales.Estaticas.src;
+package Lineales.Estaticas;
 
 public class Pila {
     private Object[] arreglo;
